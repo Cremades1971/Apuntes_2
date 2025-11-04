@@ -33,5 +33,50 @@ nav:
     - Inicio: index.md
     - Apuntes: Microprocesadores_Marp.md
 
+plugins:
+    - search
+    - print-site:
+        add_to_navigation: false
+        print_page_title: 'Print Site'
+        print_page_basename: 'print_page'
+        add_print_site_banner: false
+        # Table of contents
+        add_table_of_contents: true
+        toc_title: 'Table of Contents'
+        toc_depth: 6
+        # Content-related
+        add_full_urls: false
+        enumerate_headings: true
+        enumerate_figures: true
+        add_cover_page: true
+        cover_page_template: ""
+        path_to_pdf: ""
+        include_css: true
+        enabled: true
+    - pdf-export:
+        combined: true
+    - page-to-pdf:
+        opcio: valor
+    - with-pdf
+theme:
+    name: 'material'
+    features:
+      - navigation.sections
+      - navigation.top
+      - content.code.copy
 
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences:
+    custom_fences:
+      - name: mermaid
+      class: mermaidformat: !!python/name:pymdownx.superfences.fence_code_format
+   - pymdownx.snippets
+  
+
+
+ 
+ 
 
